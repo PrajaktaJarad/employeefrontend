@@ -1,0 +1,254 @@
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/assets/backarrow.png" style="width: 30px;">  back</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#addEmployee" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <br><br>
+        <a class="navbar-brand" href="#" style="font-size: 30px; color:rgb(56, 56, 172);">Candidate Details</a>
+
+        <a class="navbar-brand" href="#"><img src="/assets/home.png" style="width: 30px;">Home</a>
+
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="card" style="width: 40rem; border-color:rgb(0, 153, 255);">
+    <div  class="card-body" *ngFor="let e of empList" >
+      
+      <h5 class="card-title" style="color: rgba(0, 204, 255, 0.945);" >Candidate Profile</h5>
+      
+      <h6 class="card-title" ><img src="/assets/profile.png" style="width: 50px;"> name:  {{e.name}}</h6>
+      <h6 class="card-title">Contact No: {{e.contact}}</h6>
+      <h6 class="card-title">Email:{{e.email}}</h6>
+      <h6 class="card-title">Current Company: {{e.currentcompany}}</h6>
+      <h6 class="card-title">Location: {{e.location}}</h6>
+      <h6 class="card-title">Skill: {{e.skill}}</h6>
+      <h6 class="card-title">Tower: {{e.tower}}</h6>
+      <h6 class="card-title">current status: {{e.currentstatus}}</h6>
+    </div>
+  </div>
+
+  
+
+<br>
+  <div class="card" style="width: 40rem;border-color:rgb(0, 153, 255);" >
+    <div class="card-body" *ngFor="let r of RatingList">
+      <h5 class="card-title" style="color: rgba(0, 204, 255, 0.945);"  >Feedback Information:</h5>
+      <h6 class="card-title">L1 Panel Name: {{r.name}}</h6>
+      <h6 class="card-title">L1 Average Rating:{{r.rating}}</h6>
+      
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary active" aria-current="page">View Evalution Form</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="card" style="width: 40rem; border-color:rgb(0, 153, 255);">
+    <div  class="card-body" *ngFor="let e of expList" >
+      <h5 class="card-title" style="color: rgba(0, 204, 255, 0.945);" >Candidate Experience</h5>
+      <h6 class="card-title" >Total Exp:  {{e.totalexp}}</h6>
+      <h6 class="card-title"> Relevant Exp: {{e.relevantexp}}</h6>
+      <h6 class="card-title">Level Based on Exp:{{e.level}}</h6>
+      <h6 class="card-title">Proposed Grade: {{e.prograde}}</h6>
+      <h6 class="card-title">Band Deviation: {{e.band}}</h6>
+
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary active" aria-current="page">Download Resume</a>
+    </div>
+  </div>
+</div>
+
+  <br>
+  <div class="card" style="width: 40rem; border-color:rgb(0, 153, 255);">
+    <div  class="card-body" *ngFor="let e of ctcList" >
+      <h5 class="card-title" style="color: rgba(0, 204, 255, 0.945);" >CTC Details</h5>
+      <h6 class="card-title" >Current CTC:  {{e.current}}</h6>
+      <h6 class="card-title"> Expected CTC: {{e.expected}}</h6>
+      <h6 class="card-title">Proposed/Offered CTC:{{e.proctc}}</h6>
+      <h6 class="card-title">Proposed/Offered CTC in words: {{e.words}}</h6>
+      <h6 class="card-title">Average C1 CTC: {{e.avg}}</h6>
+      <h6 class="card-title">Hike Percent: {{e.hike}}</h6>
+      <h6 class="card-title">Threshold Value: {{e.thresold}}</h6>
+
+      
+    </div>
+  </div>
+
+  <br>
+  <div class="card" style="width: 40rem; border-color:rgb(0, 153, 255);">
+    <div  class="card-body" *ngFor="let e of hisList" >
+      <h5 class="card-title" style="color: rgba(0, 204, 255, 0.945);" >CTC History</h5>
+      <h6 class="card-title" >Offered CTC:  {{e.offeredctc}}</h6>
+      <h6 class="card-title"> Holding Offer: {{e.holdingoff}}</h6>
+      <h6 class="card-title">Created By:{{e.createdBy}}</h6>
+      <h6 class="card-title">Date & Time: {{e.date}}</h6>
+
+    </div>
+    </div>
+
+    <br>
+  <div class="card" style="width: 40rem; border-color:rgb(0, 153, 255);">
+    <div  class="card-body" *ngFor="let e of joiList" >
+      <h5 class="card-title" style="color: rgba(0, 204, 255, 0.945);" >Joining Details</h5>
+      <h6 class="card-title" >Offered CTC:  {{e.doj}}</h6>
+      <h6 class="card-title"> Holding Offer: {{e.month}}</h6>
+      <h6 class="card-title">Created By:{{e.period}}</h6>
+     
+    </div>
+    </div>
+
+ 
+   <!--  <button type="button" class="btn btn-primary active" style="background-color: rgb(113, 230, 59); color: black;">Approve</button>
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Approve
+  </button>  -->
+
+  <div class="btn-group" role="group" aria-label="Basic outlined example">
+   <button class="btn btn-primary active" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+      Approve
+    </button>
+ <!-- 
+    <button type="button" class="btn btn-primary active" style="background-color: red; color: black;" >Reject</button>  -->
+    
+      <button class="btn btn-primary active" type="button" style="background-color: red; color:black;" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample1" aria-expanded="false" aria-controls="collapseWidthExample1" >
+       Reject
+      </button>
+   
+    <button type="button" class="btn btn-primary active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="background-color: yellow;color: black;"  >Negotiate</button>
+  </div>
+
+
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Comment:</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>type your comment here</p>
+      
+    </div>
+    <button type="button" class="btn btn-outline-success">Negotiate</button>
+
+  </div>
+
+
+  <div style="min-height: 120px;">
+    <div class="collapse collapse-horizontal" id="collapseWidthExample1">
+      <div class="dropdown">
+        <div class="card card-body" style="width: 700px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Reason for rejection
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">High salary</a></li>
+          <li><a class="dropdown-item" href="#">Average feedback</a></li>
+          <li><a class="dropdown-item" href="#">Poor feedback</a></li>
+          <li><a class="dropdown-item" href="#">fake case</a></li>
+          <li><a class="dropdown-item" href="#">Location issues</a></li>
+          <li><a class="dropdown-item" href="#">others</a></li>
+
+        </ul>
+      
+      </div>
+       <div class="card card-body" style="width: 700px;">
+       
+        Comment:-
+        
+        
+        
+       </div>
+       
+
+      </div>
+      
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+       Reject Profile
+      </button>
+    </div>
+  </div>
+
+
+
+  <div style="min-height: 120px;" >
+    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+      <div class="dropdown">
+        <div class="card card-body" style="width: 700px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Reason for approval
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Joining within 30 days</a></li>
+          <li><a class="dropdown-item" href="#">Candidate is fine with 19 LPA</a></li>
+          
+        </ul>
+      
+      </div>
+       <div class="card card-body" style="width: 700px;">
+       
+        Comment:-
+        
+        
+        
+       </div>
+       
+
+      </div>
+      
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       Approve Profile
+      </button>
+    </div>
+  </div>
+  
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Approved</h1>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"  *ngFor="let e of empList">
+{{e.name}}'s Profile has been approved
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Rejected</h1>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"  *ngFor="let e of empList">
+{{e.name}}'s Profile has been reject
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+  
